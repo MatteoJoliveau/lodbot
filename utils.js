@@ -33,7 +33,6 @@ module.exports.Utils = class Utils {
       arr.push(this.getFace(Faces[prop]));
     }
     this.face_id = 0;
-    console.dir(arr)
     return arr;
   }
 };
