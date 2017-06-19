@@ -7,8 +7,8 @@ const utils = new Utils();
 const config = utils.loadConfig(path.resolve(__dirname + "/config.yml"));
 const all_faces = utils.getAllFaces();
 
-//const bot = new Telegraf(process.env.BOT_TOKEN);
-const bot = new Telegraf(config.telegram.token);
+const bot = new Telegraf(process.env.BOT_TOKEN);
+
 
 bot.command("start", (ctx) => {
   const reply = "<b>HOWDY FELLOW LOOKER!</b>\nWelcome to <b>Look of Disapproval Bot</b>, a friendly bot to friendly spam friendly faces :D.\nIf a face does not" +
