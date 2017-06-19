@@ -2,11 +2,21 @@ module.exports.Faces = {
   SWEET: {
     name: "Sweet",
     face: "(☞ﾟヮﾟ)☞",
-    thumb: "http://i.dsplk.com/j/193.jpg"
+    description: "(☞ﾟヮﾟ)☞"
   },
   DUDE: {
     name: "Dude",
     face: "☜(ﾟヮﾟ☜)",
-    thumb: "http://i.dsplk.com/j/436.jpg"
+    description: "☜(ﾟヮﾟ☜)"
+  },
+  LENNY: {
+    name: "Lenny",
+    face: "( ͡° ͜ʖ ͡°)",
+    description: "( ͡° ͜ʖ ͡°)"
+  },
+  SHRUG: {
+    name: "Shrug",
+    face: "¯\\_(ツ)_/¯",
+    description: "¯\\_(ツ)_/¯"
   }
 }

@@ -23,14 +23,17 @@ module.exports.Utils = class Utils {
       input_message_content: {
         message_text: face.face
       },
-      thumb_url: face.thumb
+      description: face.description
     }
   }
 
   getAllFaces() {
-    return [
-      this.getFace(Faces.SWEET),
-      this.getFace(Faces.DUDE)
-    ]
+    const arr = [];
+    for (let prop in Faces) {
+      arr.push(this.getFace(Faces[prop]));
+    }
+    this.face_id = 0;
+    console.dir(arr)
+    return arr;
   }
 };
