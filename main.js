@@ -10,7 +10,7 @@ const bot = new Telegraf(config.telegram.token);
 
 bot.command("start", (ctx) => {
   const reply = "<b>HOWDY FELLOW LOOKER!</b>\nWelcome to <b>Look of Disapproval Bot</b>, a friendly bot to friendly spam friendly faces :D.\nIf a face does not"
-  + "appear in the selection, feel free to add it yourself! Follow our <a href="">contribution guide</a> to learn how to do it.\n"
+  + "appear in the selection, feel free to add it yourself! Follow our <a href=\"https://github.com/MatteoJoliveau/lodbot/blob/master/CONTRIBUTING.md\">contribution guide</a> to learn how to do it.\n"
   + "<b>HAPPY SPAM!</b>"
   ctx.replyWithHTML(reply);
 })
