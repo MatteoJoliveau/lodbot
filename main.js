@@ -1,7 +1,7 @@
 const path = require('path');
 const {Faces} = require('./faces');
 const {Utils} = require('./utils');
-const Telegraf = require('Telegraf');
+const Telegraf = require('telegraf');
 
 const utils = new Utils();
 const config = utils.loadConfig(path.resolve(__dirname + "/config.yml"));
