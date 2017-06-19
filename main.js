@@ -7,7 +7,8 @@ const utils = new Utils();
 const config = utils.loadConfig(path.resolve(__dirname + "/config.yml"));
 const all_faces = utils.getAllFaces();
 
-const bot = new Telegraf(process.env.BOT_TOKEN);
+//const bot = new Telegraf(process.env.BOT_TOKEN);
+const bot = new Telegraf(config.telegram.token);
 
 bot.command("start", (ctx) => {
   const reply = "<b>HOWDY FELLOW LOOKER!</b>\nWelcome to <b>Look of Disapproval Bot</b>, a friendly bot to friendly spam friendly faces :D.\nIf a face does not" +
@@ -21,8 +22,8 @@ bot.on('inline_query', (ctx) => {
     ctx.answerInlineQuery(all_faces, {cache_time: config.telegram.inline_cache});
   } else {
     const faces = all_faces.filter((item) => {
-      const re = new RegExp(ctx.inlineQuery.query.toLowerCase() + "\\w+", 'g');
-      return item.title.toLowerCase().match(re);
+      const string = ctx.inlineQuery.query.toLowerCase();
+      return item.title.toLowerCase().search(string) != -1;
     });
     ctx.answerInlineQuery(faces, {cache_time: config.telegram.inline_cache})
   }
