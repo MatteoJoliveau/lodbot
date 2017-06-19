@@ -23,7 +23,7 @@ module.exports.Utils = class Utils {
       input_message_content: {
         message_text: face.face
       },
-      description: face.description
+      description: face.face
     }
   }
 

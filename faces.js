@@ -1,22 +1,18 @@
 module.exports.Faces = {
   SWEET: {
     name: "Sweet",
-    face: "(☞ﾟヮﾟ)☞",
-    description: "(☞ﾟヮﾟ)☞"
+    face: "(☞ﾟヮﾟ)☞"
   },
   DUDE: {
     name: "Dude",
-    face: "☜(ﾟヮﾟ☜)",
-    description: "☜(ﾟヮﾟ☜)"
+    face: "☜(ﾟヮﾟ☜)"
   },
   LENNY: {
     name: "Lenny",
-    face: "( ͡° ͜ʖ ͡°)",
-    description: "( ͡° ͜ʖ ͡°)"
+    face: "( ͡° ͜ʖ ͡°)"
   },
   SHRUG: {
     name: "Shrug",
-    face: "¯\\_(ツ)_/¯",
-    description: "¯\\_(ツ)_/¯"
+    face: "¯\\_(ツ)_/¯"
   }
 }
