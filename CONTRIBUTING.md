@@ -12,8 +12,7 @@ all the LoD faces you may desire. Copy their **text** representation and create 
 ```javascript
 IDENTIFIER: {
   name: "Identifier",
-  face: "(☞ﾟヮﾟ)☞", //text representation of the face
-  description: "(☞ﾟヮﾟ)☞" //same as 'face'
+  face: "(☞ﾟヮﾟ)☞" //text representation of the face
 }
 ```
 
