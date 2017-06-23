@@ -46,5 +46,13 @@ module.exports.Faces = {
   ORLY: {
     name: "O'RLY",
     face: "﴾͡๏̯͡๏﴿ O’RLY?"
+  },
+  HAPPY: {
+    name: "Happy",
+    face: "\\ (•◡•) /"
+  },
+  HAPS: {
+    name: "Happy Side",
+    face: "(/ﾟヮﾟ)/"
   }
 }
