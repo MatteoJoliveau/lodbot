@@ -16,6 +16,4 @@ IDENTIFIER: {
 }
 ```
 
-You can find thumbnails by going to http://www.disapprovallook.com/?cat=16.
-
 ### THANK YOU, ANY HELP IS MUCH APPRECIATED! :D
