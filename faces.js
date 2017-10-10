@@ -54,5 +54,9 @@ module.exports.Faces = {
   HAPS: {
     name: "Happy Side",
     face: "(/ﾟヮﾟ)/"
+  },
+  DISBELIEF: {
+    name: "Disbelief",
+    face: "☉_☉"
   }
 }
