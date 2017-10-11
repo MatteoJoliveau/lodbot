@@ -11,6 +11,10 @@ module.exports.Faces = {
     name: "Lenny",
     face: "( ͡° ͜ʖ ͡°)"
   },
+  HAPPY_LENNY: {
+    name: "Happy Lenny",
+    face: "( ͡ᵔ ͜ʖ ͡ᵔ )"
+  },
   SHRUG: {
     name: "Shrug",
     face: "¯\\_(ツ)_/¯"
