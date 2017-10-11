@@ -62,7 +62,7 @@ module.exports.Faces = {
   DISBELIEF: {
     name: "Disbelief",
     face: "☉_☉"
-  }
+  },
   KAWAII_DUDE: {
     name: "Kawaii Dude",
     face: "(づ｡◕‿‿◕｡)づ"
