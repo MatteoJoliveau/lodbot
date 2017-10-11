@@ -1,0 +1,17 @@
+
+namespace :web do
+    task :frontend do
+        mkdir_p "public"
+        sh "cd ../frontend && npm run webpack"
+        sh "cp -r ../frontend/build/* ./public/"
+    end
+
+    task :start do
+        ruby "backend.rb"
+    end
+
+    task :full do
+        Rake::Task["web:frontend"].invoke
+        Rake::Task["web:start"].invoke
+    end
+end
