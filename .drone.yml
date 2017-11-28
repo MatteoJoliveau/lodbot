@@ -11,8 +11,7 @@ pipeline:
     service: mj-bots/lodbot
     docker_image: matteojoliveau/lodbot:latest
     confirm: true
-    access_key: RANCHER_ACCESS_KEY
-    secret_key: RANCHER_SECRET_KEY
+    secrets: [ RANCHER_ACCESS_KEY, RANCHER_SECRET_KEY ]
 # deploy:
 #   rancher:
 #     url: http://evilcorp.gq:8080
