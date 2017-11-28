@@ -1,0 +1,21 @@
+pipeline:
+  build_image:
+    image: docker
+    commands:
+      - docker build . -t matteojoliveau/lodbot:latest
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+  # update_rancher:
+  #   image: peloton/drone-rancher
+  #   url: http://evilcorp.gq:8080
+  #   service: mj-bots/lodbot
+  #   docker_image: matteojoliveau/lodbot:latest
+  #   confirm: true
+  #   secrets: [ RANCHER_ACCESS_KEY, RANCHER_SECRET_KEY ]
+deploy:
+  rancher:
+    url: http://evilcorp.gq:8080
+    access_key: RANCHER_ACCESS_KEY
+    secret_key: RANCHER_SECRET_KEY
+    service: mj-bots/lodbot
+    docker_image: matteojoliveau/lodbot:latest
