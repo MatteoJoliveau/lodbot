@@ -4,6 +4,11 @@ Help us share faces!
 2. Modify code
 3. Open [PR](https://github.com/MatteoJoliveau/lodbot/pulls)
 
+## Bot Token
+You need a Telegram bot token from [BotFather](https://t.me/BotFather) in order to test 
+the bot on your own. Put it in an env variable named `BOT_TOKEN` and the
+bot will pick it up.
+
 **ASK TO MERGE IN DEVELOP, NOT IN MASTER**
 Develop is the active development branch, master the stable release branch. Only PR targeting develop will be approved.     
 
