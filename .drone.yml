@@ -1,6 +1,6 @@
 pipeline:
   test:
-    image: nodejs
+    image: node
     commands:
       - echo $KUBERNETES_TOKEN
   build:
