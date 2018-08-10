@@ -2,7 +2,7 @@ pipeline:
   publish:
     image: plugins/docker
     repo: registry.evilcorp.gq/matteojoliveau/lodbot
-    registry: https://registry.evilcorp.gq
+    registry: registry.evilcorp.gq
     tags: latest
   deploy:
     image: quay.io/honestbee/drone-kubernetes
