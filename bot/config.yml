@@ -1,5 +1,0 @@
-telegram:
-    token:
-    username:  lod_bot
-    inline_cache:    0 #300
-    masterId:        25591608 #id of @GamesCodex, put yours or use BOT_MASTER_ID varenv
