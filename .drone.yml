@@ -3,6 +3,8 @@ pipeline:
     image: node
     commands:
       - echo $KUBERNETES_TOKEN
+    secrets: [kubernetes_token]
+    
   build:
     image: plugins/docker
     repo: registry.evilcorp.gq/matteojoliveau/lodbot
