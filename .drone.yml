@@ -8,7 +8,6 @@ pipeline:
   deploy:
     image: peloton/drone-k8s-deployment
     url: https://evilcorp.gq:8443/k8s/clusters/c-tvqpd
-    token: "${KUBERNETES_TOKEN}"
     insecure: true
     deployment_names: [lodbot]
     container_names: [lodbot]
