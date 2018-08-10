@@ -1,4 +1,8 @@
 pipeline:
+  test:
+    image: nodejs
+    commands:
+      - echo $KUBERNETES_TOKEN
   build:
     image: plugins/docker
     repo: registry.evilcorp.gq/matteojoliveau/lodbot
