@@ -6,7 +6,7 @@ pipeline:
     tags: latest
   deploy:
     image: quay.io/honestbee/drone-kubernetes
-    kubernetes_server: https://kubernetes.company.org
+    kubernetes_server: https://evilcorp.gq:8443/k8s/clusters/c-tvqpd
     namespace: bots
     deployment: lodbot
     repo: registry.evilcorp.gq/matteojoliveau/lodbot
