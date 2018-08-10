@@ -12,5 +12,5 @@ pipeline:
     deployment: lodbot
     repo: registry.evilcorp.gq/matteojoliveau/lodbot
     container: lodbot
-    tag: "#{DRONE_COMMIT_SHA:0:8}"
+    tag: "${DRONE_COMMIT_SHA:0:8}"
     secrets: [kubernetes_token]
