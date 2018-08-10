@@ -10,8 +10,8 @@ pipeline:
     url: https://evilcorp.gq:8443/k8s/clusters/c-tvqpd
     token: "${KUBERNETES_TOKEN}"
     insecure: true
-    deployment_names: lodbot
-    container_names: lodbot
-    namespaces: bots
+    deployment_names: [lodbot]
+    container_names: [lodbot]
+    namespaces: [bots]
     docker_image: "registry.evilcorp.gq/matteojoliveau/lodbot:${DRONE_COMMIT_SHA:0:8}"
     secrets: [kubernetes_token]
