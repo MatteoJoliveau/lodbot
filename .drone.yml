@@ -1,5 +1,5 @@
 pipeline:
-  publish:
+  build:
     image: plugins/docker
     repo: registry.evilcorp.gq/matteojoliveau/lodbot
     registry: registry.evilcorp.gq
