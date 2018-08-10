@@ -1,10 +1,12 @@
 pipeline:
   test:
     image: node
+    environment:
+      - TEST: "${KUBERNETES_TOKEN}"
     commands:
-      - echo $KUBERNETES_TOKEN
+      - echo $TEST
     secrets: [kubernetes_token]
-    
+
   build:
     image: plugins/docker
     repo: registry.evilcorp.gq/matteojoliveau/lodbot
