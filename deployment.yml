@@ -32,7 +32,7 @@ status:
   loadBalancer: {}
  
  ---
- apiVersion: apps/v1beta2
+apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
   annotations:
