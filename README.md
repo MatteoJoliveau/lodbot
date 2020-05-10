@@ -36,6 +36,14 @@ wsk action update /myNamespace/lodbot/lodbot --param botToken $BOT_TOKEN
 
 After the first deployment the bot can be updated by simply running `yarn deploy` again.
 
+## Configuration
+
+As showcased in the _Run_ section above, the bot token can be configured by binding
+the corresponding action parameter by running `wsk action update /myNamespace/lodbot/lodbot --param botToken $BOT_TOKEN`.
+
+Similarly, the [inline query response cache time] can be configured with the appropriate param:  
+`wsk action update /myNamespace/lodbot/lodbot --param inlineCache $CACHE_SECONDS`
+
 ## Mozilla Public License 2.0
 This Source Code Form is subject to the terms of the Mozilla Public
 License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -46,3 +54,4 @@ file, You can obtain one at http://mozilla.org/MPL/2.0/.
 [Yarn 1.x]: https://classic.yarnpkg.com/lang/en/
 [wsk]: https://github.com/apache/openwhisk/blob/master/docs/cli.md
 [wskdeploy]: https://github.com/apache/openwhisk-wskdeploy
+[inline query response cache time]: https://core.telegram.org/bots/api#answerinlinequery
