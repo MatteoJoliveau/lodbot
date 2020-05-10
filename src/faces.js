@@ -1,4 +1,4 @@
-module.exports.Faces = {
+const BASE_FACES = {
   SWEET: {
     name: "Sweet",
     face: "(☞ﾟヮﾟ)☞"
@@ -68,3 +68,21 @@ module.exports.Faces = {
     face: "(づ｡◕‿‿◕｡)づ"
   }
 }
+
+function getFace({ face, name }, id) {
+  return {
+    type: 'article',
+    id,
+    title: name,
+    input_message_content: {
+      message_text: face
+    },
+    description: face
+  }
+}
+
+function getAllFaces() {
+  return Object.values(BASE_FACES).map(getFace);
+}
+
+export const FACES = getAllFaces();

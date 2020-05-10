@@ -1,0 +1,21 @@
+packages:
+  lodbot: 
+    version: 0.1.0
+    license: MPL-2.0
+    actions:
+      setWebhook:
+        location: dist/setWebhook.js
+        runtime: nodejs:12
+        inputs:
+          webhookUrl: string
+      lodbot:
+        location: dist/main.js
+        runtime: nodejs:12
+        web-export: true
+    apis:
+      lodbot:
+        bot:
+          updates:
+            lodbot:
+              method: POST
+              response: http
