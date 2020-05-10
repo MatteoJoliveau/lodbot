@@ -16,6 +16,11 @@ Here is a step-by-step tutorial to deploy LoD Bot.
 # Install dependencies
 yarn install
 
+# Copy and edit the deployment.yml file to change the configuration params
+# The webhook URL has not bee generated yet, so skip it for now
+cp deployment.example.yml
+$EDITOR deployment.yml
+
 # Build and deploy (this assumes properly configured wsk and wksdeploy commands are in the PATH)
 yarn deploy
 
@@ -25,11 +30,14 @@ yarn deploy
 # Retrieve the webhook URL
 wsk api list
 
-# Configure the webhook URL on Telegram. Use the right values for $BOT_TOKEN and $WEBHOOK_URL
-wsk action invoke /myNamespace/lodbot/setWebhook -p botToken $BOT_TOKEN -p webhookUrl $WEBHOOK_URL
+# Add the webhook URL to the deployment file
+$EDITOR deployment.yml
 
-# Configure the token on the bot action
-wsk action update /myNamespace/lodbot/lodbot --param botToken $BOT_TOKEN
+# Redeploy
+yarn deploy
+
+# Set the webhook on Telegram servers
+wsk action invoke /lodbot/lodbot/setWebhook
 
 # Done!
 ```
@@ -38,11 +46,10 @@ After the first deployment the bot can be updated by simply running `yarn deploy
 
 ## Configuration
 
-As showcased in the _Run_ section above, the bot token can be configured by binding
-the corresponding action parameter by running `wsk action update /myNamespace/lodbot/lodbot --param botToken $BOT_TOKEN`.
+As showcased in the _Run_ section above, the bot can be configured using the [deployment.yml](deployment.yml) file to bind parameters.
 
-Similarly, the [inline query response cache time] can be configured with the appropriate param:  
-`wsk action update /myNamespace/lodbot/lodbot --param inlineCache $CACHE_SECONDS`
+The available parameters, as well as their defaults, are listed in the `inputs` sections of
+each action inside [manifest.yml](manifest.yml).
 
 ## Mozilla Public License 2.0
 This Source Code Form is subject to the terms of the Mozilla Public

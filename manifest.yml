@@ -7,11 +7,29 @@ packages:
         location: dist/setWebhook.js
         runtime: nodejs:12
         inputs:
-          webhookUrl: string
+          webhookUrl:
+            type: string
+            desciption: |
+              URL for Telegram to send updates to.
+              Can be retrieved by running `wsk api list`.
+          botToken:
+            type: string
+            description: Telegram token obtained from t.me/botfather.
       lodbot:
         location: dist/main.js
         runtime: nodejs:12
         web-export: true
+        inputs:
+          botToken:
+            type: string
+            description: Telegram token obtained from t.me/botfather.
+          inlineCache:
+            type: integer
+            description: |
+              The maximum amount of time in seconds that the result of the inline query 
+              may be cached on Telegram servers.
+            default: 300
+
     apis:
       lodbot:
         bot:

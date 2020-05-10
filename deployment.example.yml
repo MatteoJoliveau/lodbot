@@ -1,0 +1,12 @@
+packages:
+  lodbot: 
+    version: 0.1.0
+    actions:
+      setWebhook:
+        inputs:
+          webhookUrl: '<get by running wsk api list>'
+          botToken: '<get from BotFather>'
+      lodbot:
+        inputs:
+          botToken: '<get from BotFather>'
+          inlineCache: 300
