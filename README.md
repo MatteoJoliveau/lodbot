@@ -37,7 +37,7 @@ $EDITOR deployment.yml
 yarn deploy
 
 # Set the webhook on Telegram servers
-wsk action invoke /lodbot/lodbot/setWebhook
+wsk action invoke /myNamespace/lodbot/setWebhook
 
 # Done!
 ```
@@ -46,7 +46,7 @@ After the first deployment the bot can be updated by simply running `yarn deploy
 
 ## Configuration
 
-As showcased in the _Run_ section above, the bot can be configured using the [deployment.yml](deployment.yml) file to bind parameters.
+As showcased in the _Run_ section above, the bot can be configured using the [deployment.yml](deployment.example.yml) file to bind parameters.
 
 The available parameters, as well as their defaults, are listed in the `inputs` sections of
 each action inside [manifest.yml](manifest.yml).
