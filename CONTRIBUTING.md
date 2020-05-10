@@ -9,9 +9,6 @@ You need a Telegram bot token from [BotFather](https://t.me/BotFather) in order 
 Follow the deployment instruction in the [README](README.md#run) for more information about how
 to pass it to the bot.
 
-**ASK TO MERGE IN DEVELOP, NOT IN MASTER**
-Develop is the active development branch, master the stable release branch. Only PR targeting develop will be approved.     
-
 If you want to help expand our face selection, go to [www.disapprovallook.com](http://www.disapprovallook.com). Here you can find
 all the LoD faces you may desire. Copy their **text** representation and create a new entry in the `src/faces.js` file following the following *JSON* schema:   
 ```javascript
